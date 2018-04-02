@@ -1,4 +1,4 @@
-# vue-chat
+# Aplicación de mensajes en tiempo real con VueJs
 
 > A Vue.js project
 

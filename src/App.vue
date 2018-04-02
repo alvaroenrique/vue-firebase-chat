@@ -52,14 +52,18 @@
             <Chat/>
           </v-flex>
 
-          <v-flex xs12 class="mt-4">
-            <v-card>
-              <v-card-text class="px-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae mollitia labore libero, animi, fugiat officia, dolor debitis autem aliquam iure eaque veritatis dolore accusantium reiciendis fugit nobis impedit cupiditate.</v-card-text>
-            </v-card>
-          </v-flex>
+          <!-- <v-flex xs12 class="mt-4" >
+
+            <v-layout row justify-center v-if="!mostrarForm">
+              <v-flex xs2>
+                <v-btn outline @click="mostrarForm = !mostrarForm">Ingresar Mensaje</v-btn>
+              </v-flex>
+            </v-layout>
+
+          </v-flex> -->
 
         </v-layout>
-      </v-container>
+      </v-container>  
 
     </v-content>
     
@@ -71,22 +75,19 @@
 </template>
 
 <script>
-  import Chat from "./components/Chat";
+import Chat from "./components/Chat";
 
-  export default {
-    components: {Chat},
-    data () {
-      return {
-        drawer: null
-      }
-    },
-    methods: {
-      openCode: function() {
-
-      },
-      openInfo: function() {
-
-      }
-    }
+export default {
+  components: { Chat },
+  data() {
+    return {
+      drawer: null,
+      
+    };
+  },
+  methods: {
+    openCode: function() {},
+    openInfo: function() {}
   }
+};
 </script>
