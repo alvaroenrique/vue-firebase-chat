@@ -44,32 +44,37 @@
     </v-toolbar>
     
     <v-content>
-      <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-        >
-          <v-flex text-xs-center>
-            <v-tooltip left>
-              <v-btn icon large :href="source" target="_blank" slot="activator">
-                <v-icon large>code</v-icon>
-              </v-btn>
-              <span>Source</span>
-            </v-tooltip>
+  
+      <v-container>
+        <v-layout row wrap>
+
+          <v-flex xs12 class="mt-4">
+            <Chat/>
           </v-flex>
+
+          <v-flex xs12 class="mt-4">
+            <v-card>
+              <v-card-text class="px-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae mollitia labore libero, animi, fugiat officia, dolor debitis autem aliquam iure eaque veritatis dolore accusantium reiciendis fugit nobis impedit cupiditate.</v-card-text>
+            </v-card>
+          </v-flex>
+
         </v-layout>
       </v-container>
+
     </v-content>
     
     <v-footer app inset>
-      <span> &copy; 2018 Alvaro Enrique</span>
+      <span class="ml-2"> &copy; 2018 Alvaro Enrique</span>
     </v-footer>
     
   </v-app>
 </template>
 
 <script>
+  import Chat from "./components/Chat";
+
   export default {
+    components: {Chat},
     data () {
       return {
         drawer: null
